@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="projectCricket.css">
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+
+    <script>
+
+        let score={
+            win:0,
+            tie:0,
+            lost:0,
+        }
+    </script>
+    <button onclick="
+     const userChoiceMsg='you have chosen bat';
+     //this will generate a random no between 0 and 3 for the computer
+     let computerChoice;
+    let randomNo=Math.random()*3;
+    if(randomNo>0 && randomNo<=1){
+         computerChoice='Bat';
+    }else if(randomNo>1 && randomNo<=2){
+         computerChoice='Ball';
+    }else{
+        computerChoice='Stump';
+    }
+   const computerChoiceMsg=`computer choice is ${computerChoice}`;
+   let resultMsg;
+if(computerChoice==='Ball'){
+    resultMsg='User won';
+    score.win++;
+}else if(computerChoice==='Bat'){
+   resultMsg=`Draw`;
+}else if(computerChoice==='Stump'){
+    resultMsg='Computer won';
+}
+console.log(score);
+
+    alert(`${userChoiceMsg} \n ${computerChoiceMsg} \n ${ resultMsg}`);
+    
+    ">Bat</button>
+
+
+    <button onclick="
+     const userChoiceMsg2='you have chosen ball';
+     //this will generate a random no between 0 andd 3 for the computer
+     let computerChoice2;
+    let randomNo2=Math.random()*3;
+    if(randomNo2>0 && randomNo2<=1){
+         computerChoice2='Bat';
+    }else if(randomNo2>1 && randomNo2<=2){
+         computerChoice2='Ball';
+    }else{
+        computerChoice2='Stump';
+    }
+   const computerChoiceMsg2=`computer choice is ${computerChoice2}`;
+   let resultMsg2;
+if(computerChoice2==='Ball'){
+    resultMsg='draw';
+}else if(computerChoice2==='Bat'){
+   resultMsg2=`computer won`;
+}else if(computerChoice2==='Stump'){
+    resultMsg2='User won';
+    score.win++; 
+}
+console.log(score);
+
+    alert(`${userChoiceMsg2} \n ${computerChoiceMsg2} \n ${ resultMsg2}`);
+    
+   " >Ball</button>
+
+
+    <button onclick="
+    const userChoiceMsg3='you have chosen Stump';
+    //this will generate a random no between 0 andd 3 for the computer
+    let computerChoice3;
+   let randomNo3=Math.random()*3;
+   if(randomNo3>0 && randomNo3<=1){
+        computerChoice3='Bat';
+   }else if(randomNo3>1 && randomNo3<=2){
+        computerChoice3='Ball';
+   }else{
+       computerChoice3='Stump';
+   }
+  const computerChoiceMsg3=`computer choice is ${computerChoice3}`;
+  let resultMsg3;
+if(computerChoice3==='Ball'){
+   resultMsg3='Computer won';
+}else if(computerChoice3==='Bat'){
+  resultMsg3=`User won`;
+}else if(computerChoice3==='Stump'){
+   resultMsg3='Draw';
+}
+
+   alert(`${userChoiceMsg3} \n ${computerChoiceMsg3} \n ${ resultMsg3}`);
+    
+    
+    ">Stump</button>
+</body>
+</html>
